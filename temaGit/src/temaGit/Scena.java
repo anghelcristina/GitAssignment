@@ -1,6 +1,7 @@
 package temaGit;
 
-public class Scena {
+public class Scena implements InterfataCheltuieli {
+	public static final float COST_PERSONAJ = 1000;
 	private String denumireScena;
 	private int numarPersonaje;
 	private String descriere;
@@ -10,6 +11,11 @@ public class Scena {
 		this.denumireScena = denumireScena;
 		this.numarPersonaje = numarPersonaje;
 		this.descriere = descriere;
+	}
+
+	@Override
+	public float calculCostPerScena() {
+		return COST_PERSONAJ * this.numarPersonaje;
 	}
 	
 	
